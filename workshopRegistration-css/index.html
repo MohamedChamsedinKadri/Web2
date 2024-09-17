@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShop registration </title>
+    <style>
+        body {
+        background-color: #f7fafc;
+        font-family: Arial, sans-serif;
+        padding: 20px;}
+
+        .container{
+            max-width: 900px;
+            margin: 20px;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 4px 6px rgba(0, 0,0,0.1);
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #c6f6d5;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .header h1{
+            font-size: 1.25rem; 
+            font-weight: bold; 
+            margin: 0;
+
+        }
+        .header button{
+            font-size: 0.875rem; 
+            font-weight: bold; 
+            background: none;
+            border: none;
+            cursor: pointer;
+
+        }
+        .hilighting-text{
+            color:#3182ce;
+            text-decoration: underline;
+            margin-top: 16px;
+
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 24px;
+            margin-top: 24px;
+
+        }
+        .form-group{
+            margin-bottom: 16 px;
+
+        }
+        .form-group label{
+            display: block;
+            font-size: 0.875rem; 
+            font-weight: bold; 
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+
+        .form-group select {
+            width: 100%;
+            padding: 8px; 
+            border: 1px solid #d1d5db; 
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px; 
+        }
+
+        .button-group button {
+            padding: 12px 24px; 
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            margin-right: 16px; 
+        }
+
+        .button-submit {
+            background-color: #48bb78; /* Equivalent to bg-green-500 */
+        }
+
+        .button-reset {
+            background-color: #a0aec0; /* Equivalent to bg-gray-500 */
+        }
+
+        .button-submit:hover {
+            background-color: #38a169;
+        }
+
+        .button-reset:hover {
+            background-color: #718096;
+        }
+
+        </style>
+</head>
+
+<body
+<div class="container">
+
+    <div class="header">
+        <h1> WorkShop Registration</h1>
+        <button>More action ▼ </button>
+    </div>
+    <p class="highlight-text">Register now while seats are available!</p>
+
+    <div class="grid-container">
+        <div>
+            <div class="form-group">
+                <label>First Name <span style="color: red;">*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>Last Name <span style="color: red;">*</span></label>
+                <input type="text">
+            </div>
+            
+            <div class="form-group">
+                <label>Company/ Institution <span style="color: red;">*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>Address <span style="color: red;">*</span></label>
+                <textarea></textarea>
+            </div>
+            <div class="form-group">
+                <label>City <span style="color: red;">*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>State / Province / Region</label>
+                <select>
+                    <option>-Select-</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Country</label>
+                <select>
+                    <option>-Select-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>City <span style="color: red;">*</span></label>
+                <input type="email">
+            </div>
+            <div class="form-group">
+                <label>Phone Number <span style="color: red;">*</span></label>
+                <input type="number" required>
+            </div>
+        </div>
+        <div>
+            <div class="form-group">
+                <h2 style="font-size: 1.125rem; font-weight: bold;">Lunch</h2>
+                <label>Meal Preference</label>
+                <select>
+                    <option>Vegetarian</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <h2 style="font-size: 1.125rem; font-weight: bold;">Payment Details</h2>
+                <label>Payment Mode</label>
+                <div class="form-group">
+                    <input type="checkbox"> Cash
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"> Cheque
+                </div>
+                <div class="form-group">
+                    <input type="checkbox"> Demand Draft
+                </div>
+
+
+            <div class="form-group">
+                <label>DD/Cheque No.</label>
+                <input type="text">
+            </div>    
+
+            <div class="form-group">
+                <label>Drawn On (Bank Name)</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                 <label>Payable at</label>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="button-group">
+    <button class="button-submit">Submit</button>
+    <button class="button-reset">Reset</button>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+        
+
+

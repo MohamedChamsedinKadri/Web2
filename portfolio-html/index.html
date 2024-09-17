@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Shamseddine Kadri Portfolio</title>
+    <!-- Favicon -->
+    <link href="images/Dogcoin.jpeg" type="image/x-icon" rel="shortcut icon"/>
+    <!-- CSS for basic styling (optional) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .contact-me {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mohamed Shamseddine Kadri</h1>
+        <img src="./images/MohamedChamseddineKadri.png" alt="Mohamed Shamseddine Kadri" class="profile-pic">
+        <p>Email: <a href="mailto:mkadri@miu.edu">mkadri@miu.edu</a></p>
+        <p>Phone: <a href="tel:+16412339755">641-233-9755</a></p>
+        <p>Job Title: Software Designer</p>
+        <p>GitHub: <a href="https://github.com/MohamedChamsedinKadri" target="_blank">MohamedChamsedinKadri</a></p>
+
+        <h2>About Me</h2>
+        <p>
+            I am Mohamed Shamseddine Kadri, a 26-year-old software developer from Tunisia. I previously worked with Vodafone TV in Tunisia, where I contributed to creating operating systems for TVs and set-top boxes sold in Germany and Spain. My role also involved debugging various software issues. I have a passion for problem-solving, which occupies a significant part of my time. Despite this, I make it a point to spend time outdoors, enjoying nature, hiking, and visiting lakes and beaches. I am a big fan of green spaces, and I also love playing soccer. In addition to my professional and recreational pursuits, I enjoy exploring new technologies. My expertise lies in Java, Spring Boot, database queries, and wireless technologies, though I have a foundational understanding of web development from university coursework.
+        </p>
+
+        <h2>Interests</h2>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Hiking</li>
+            <li>Exploring Nature</li>
+            <li>Soccer</li>
+            <li>Visiting Lakes and Beaches</li>
+        </ul>
+
+        <h2>Technologies</h2>
+        <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Database Queries</li>
+            <li>Wireless Technologies</li>
+            <li>Basic Web Development</li>
+        </ul>
+
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post" class="contact-me">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

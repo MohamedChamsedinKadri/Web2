@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Test</title>
+</head>
+<body>
+    <script>
+        // Function to create a new book
+        async function createBook() {
+            const response = await fetch('http://localhost:3000/books', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: 'GoodEbening',
+                    ISBN: '111-222-333',
+                    publishedDate: '2011-08-21',
+                    author: 'ibnou Habdoun'
+                })
+            });
+            const data = await response.json();
+            console.log('Created Book:', data);
+        }
+
+        // Function to get all books
+        async function getBooks() {
+            const response = await fetch('http://localhost:3000/books');
+            const data = await response.json();
+            console.log('All Books:', data);
+        }
+
+        // Function to get a book by ID
+        async function getBookById(bookId) {
+            const response = await fetch(`http://localhost:3000/books/${bookId}`);
+            const data = await response.json();
+            console.log('Book by ID:', data);
+        }
+
+        // Function to update a book
+        async function updateBook(bookId) {
+            const response = await fetch(`http://localhost:3000/books/${bookId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: 'Updated Title',
+                    ISBN: '987-654-321',
+                    publishedDate: '2024-01-02',
+                    author: 'Updated Author'
+                })
+            });
+            const data = await response.json();
+            console.log('Updated Book:', data);
+        }
+
+        // Function to delete a book
+        async function deleteBook(bookId) {
+            const response = await fetch(`http://localhost:3000/books/${bookId}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                console.log(`Deleted Book with ID: ${bookId}`);
+            } else {
+                console.log('Failed to delete book');
+            }
+        }
+
+        // Example usage
+        createBook().then(() => {
+            getBooks().then(() => {
+                // Replace <book_id> with the actual ID of the book you want to test
+                const bookId = 1; // Example ID, replace with actual ID
+                getBookById(bookId).then(() => {
+                    updateBook(bookId).then(() => {
+                        deleteBook(bookId);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
