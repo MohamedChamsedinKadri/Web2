@@ -62,7 +62,7 @@ const App = () => {
     if (newComment.trim() === '') return; // Prevent empty comments
 
     const newCommentObject = {
-      rpid: comments.length + 1, // Generate a new rpid
+      rpid: Date.now(), // Use Date.now() to generate a unique rpid
       user: {
         uid: user.uid,
         avatar: user.avatar,
